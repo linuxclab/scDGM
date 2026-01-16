@@ -16,7 +16,6 @@ from torch_geometric import utils
 from torch_geometric.data import Data
 from torch_geometric.nn.conv.gcn_conv import gcn_norm
 
-
 from sklearn.metrics import adjusted_rand_score as ari_score
 from sklearn.metrics.cluster import normalized_mutual_info_score as nmi_score
 from sklearn.metrics import fowlkes_mallows_score
@@ -24,14 +23,6 @@ from utils import read_graph_data
 from graph_construction import *
 import warnings
 warnings.filterwarnings('ignore')
-
-#torch.manual_seed(2025) 
-import random
-#random.seed(42)  # 设置种子为42
-number =random.randint(0, 10)
-print(number)  # 生成一个1到10之间的随机整数
-torch.manual_seed(5)
-
 device = torch.device("cpu")
 
 def dense_hoscpool(x, adj, s, mu=1, alpha=0.01, new_ortho=True, mask=None):
@@ -48,7 +39,6 @@ def dense_hoscpool(x, adj, s, mu=1, alpha=0.01, new_ortho=True, mask=None):
     if mask is not None:
         mask = mask.view(batch_size, num_nodes, 1).to(x.dtype)
         x, s = x * mask, s * mask
-
     # Output adjacency and feature matrices
     out = torch.matmul(s.transpose(1, 2), x)
     out_adj = torch.matmul(torch.matmul(s.transpose(1, 2), adj), s)
@@ -58,7 +48,6 @@ def dense_hoscpool(x, adj, s, mu=1, alpha=0.01, new_ortho=True, mask=None):
     #motif_adj = torch.matmul(adj, adj)
     motif_out_adj = torch.matmul(torch.matmul(s.transpose(1, 2), motif_adj), s)
     
-
     mincut_loss = ho_mincut_loss = 0
     # 1st order MinCUT loss
     if alpha < 1:
@@ -301,3 +290,4 @@ if __name__ == "__main__":
     
     
         
+
