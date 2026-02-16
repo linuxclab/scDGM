@@ -1,4 +1,4 @@
-DGM: Deep Graph Clustering with MinCut for Single-Cell Transcriptomics Analysis
+DGM: Deep Graph Clustering with MinCut for Analysis of Single-Cell Transcriptomics
 
 This repository contains the official implementation of the paper “DGM: Deep Graph Clustering with MinCut for Analysis of Single-Cell Transcriptomics”.
 
