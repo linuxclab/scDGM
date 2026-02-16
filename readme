@@ -25,7 +25,7 @@ pip install numpy scipy scikit-learn pandas scanpy h5py
 
 Using pip
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install torch 
 pip install torch_geometric
 pip install numpy scipy scikit-learn pandas scanpy h5py
 
