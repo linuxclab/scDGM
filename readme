@@ -90,7 +90,7 @@ python code/graph_clustering.py
 
 Output: The script prints the best ARI and NMI scores achieved during training to the console. 
 
-5. Code Structure
+4. Code Structure
 
 • code/preprocess.py: Loads .h5 data, performs Scanpy-based normalization, filtering, and scaling.
 
