@@ -38,7 +38,7 @@ This project uses single-cell RNA-seq data in .h5 (h5ad) format.
 
 2.2 Organize the Directory
 
-Place your downloaded dataset file (e.g., data.h5) into the following directory structure:
+Place the dataset file (e.g., data.h5) into the following directory structure:
 
 scDGM/
 ├── dataset/
@@ -60,7 +60,7 @@ The following steps will guide you through preprocessing, feature extraction, gr
 Step 1: Data Preprocessing & Feature Extraction
 
 This step normalizes the raw data and saves the processed feature matrix and labels.
-python src/preprocess.py
+python code/preprocess.py
 
 Outputs in dataset/Adam/:
 • feature.npy: Normalized gene expression matrix.
@@ -70,7 +70,7 @@ Outputs in dataset/Adam/:
 Step 2: Dimensionality Reduction with Autoencoder
 
 This step compresses the high-dimensional features into a low-dimensional latent space.
-python src/autoencoder.py
+python code/autoencoder.py
 
 Outputs in dataset/Adam/:
 • features.npy: Low-dimensional features (used for graph construction).
